@@ -1,0 +1,42 @@
+/* Set the church image as the background */
+.background-image {
+    background-image: url('../assets/img-of-church.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Make sure the background covers the full height */
+}
+
+/* Custom styles */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background-color: #03355f !important;
+    opacity: 0.9; /* Slight transparency */
+}
+
+.logo {
+    height: 50px;
+}
+
+header nav button {
+    margin-right: 15px;
+}
+
+header nav button:hover {
+    text-decoration: underline;
+}
+
+main h1, main p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+}
+
+.card {
+    opacity: 0.9; /* Slight transparency for the cards */
+}
+
+.card-body .btn {
+    margin: 5px 0;
+}

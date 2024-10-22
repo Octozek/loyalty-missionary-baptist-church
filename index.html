@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loyalty Missionary Baptist Church</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="background-image">
+
+    <!-- Header -->
+    <header class="bg-primary text-white" style="background-color: #03355f !important;">
+        <div class="container-fluid d-flex justify-content-between align-items-center py-3">
+            <img src="assets/logo.svg" alt="Church Logo" class="logo" style="height: 50px;">
+            <nav>
+                <button class="btn btn-link text-white" id="aboutBtn">About</button>
+                <button class="btn btn-link text-white" id="getStartedBtn">Get Started</button>
+                <button class="btn btn-link text-white" id="watchBtn">Watch</button>
+                <button class="btn btn-link text-white" id="eventsBtn">Events</button>
+                <button class="btn btn-link text-white">Give</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5 text-center text-white">
+        <h1>Welcome to Loyalty Missionary Baptist Church</h1>
+        <p>Serving the community with love and faith.</p>
+    </main>
+
+    <!-- Cards for Additional Buttons -->
+    <div class="container">
+        <!-- About Card -->
+        <div id="aboutCard" class="card my-3" style="display: none;">
+            <div class="card-body">
+                <a href="about/location.html" class="btn btn-primary w-100 my-1">Location</a>
+                <a href="about/what-we-believe/index.html" class="btn btn-primary w-100 my-1">What We Believe</a>
+                <a href="about/gallery.html" class="btn btn-primary w-100 my-1">Gallery</a>
+            </div>
+        </div>
+
+        <!-- Get Started Card -->
+        <div id="getStartedCard" class="card my-3" style="display: none;">
+            <div class="card-body">
+                <a href="get-started/how-to-know-god.html" class="btn btn-primary w-100 my-1">How To Know God</a>
+                <a href="get-started/baptism.html" class="btn btn-primary w-100 my-1">Baptism</a>
+                <a href="get-started/membership.html" class="btn btn-primary w-100 my-1">Membership</a>
+                <a href="get-started/serving.html" class="btn btn-primary w-100 my-1">Serving</a>
+                <a href="get-started/small-groups.html" class="btn btn-primary w-100 my-1">Small Groups</a>
+                <a href="get-started/discipleship.html" class="btn btn-primary w-100 my-1">Discipleship</a>
+            </div>
+        </div>
+
+        <!-- Watch Card -->
+        <div id="watchCard" class="card my-3" style="display: none;">
+            <div class="card-body">
+                <a href="watch/watch-live.html" class="btn btn-primary w-100 my-1">Watch Live Services</a>
+                <a href="watch/archive.html" class="btn btn-primary w-100 my-1">Archive</a>
+            </div>
+        </div>
+
+        <!-- Events Card -->
+        <div id="eventsCard" class="card my-3" style="display: none;">
+            <div class="card-body">
+                <a href="events/upcoming-events.html" class="btn btn-primary w-100 my-1">Upcoming Events</a>
+                <a href="events/past-events.html" class="btn btn-primary w-100 my-1">Past Events</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

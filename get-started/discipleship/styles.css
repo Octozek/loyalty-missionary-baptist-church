@@ -1,0 +1,73 @@
+/* Wrapper for the parallax section */
+.parallax-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    background-color: white; /* Fallback color if the image doesn't load */
+}
+
+.parallax-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('luis-alberto-sanchez-terrones-7cTsvt25GuY-unsplash.jpg'); /* Image now in discipleship folder */
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+.parallax-text {
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Smooth parallax effect */
+.content-section {
+    background-color: white;
+    padding: 50px 0;
+}
+
+.content-section h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.content-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+body {
+    padding-top: 70px;
+    margin: 0;
+    box-sizing: border-box;
+}

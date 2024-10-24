@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discipleship</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to custom CSS file -->
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white" style="background-color: #03355f !important;">
+        <div class="container-fluid d-flex justify-content-between align-items-center py-3">
+            <img src="../../assets/logo.svg" alt="Church Logo" class="logo" style="height: 50px;">
+            <nav>
+                <a href="../../index.html" class="btn btn-link text-white">Home</a>
+                <a href="../location.html" class="btn btn-link text-white">Location</a>
+                <a href="../gallery.html" class="btn btn-link text-white">Gallery</a>
+                <a href="#" class="btn btn-link text-white">Give</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Parallax Section -->
+    <div class="parallax-wrapper">
+        <div class="parallax-background"></div>
+        <div class="parallax-content">
+            <h1 class="parallax-text">DISCIPLESHIP</h1>
+        </div>
+    </div>
+
+    <!-- Content Section after parallax -->
+    <section class="content-section">
+        <h2>Discipleship at Our Church</h2>
+        <p>
+            Discipleship is at the core of what we believe, as Jesus commands us to go and make disciples of all nations. At our church, we aim to provide resources and guidance to help each believer grow in their faith and follow Christ with commitment. Through study, fellowship, and service, we strive to become true disciples of Jesus Christ.
+        </p>
+        <p>
+            Join us on this journey as we learn, grow, and serve together, spreading the love and teachings of Jesus in our community and beyond.
+        </p>
+    </section>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Parallax scrolling effect
+        document.addEventListener('scroll', function () {
+            const parallaxBackground = document.querySelector('.parallax-background');
+            const scrollPosition = window.scrollY;
+            parallaxBackground.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
+        });
+    </script>
+</body>
+</html>

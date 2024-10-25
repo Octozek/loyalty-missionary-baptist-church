@@ -21,6 +21,7 @@ header {
     z-index: 1000; /* Ensure the header stays above all other content */
     top: 0;
     left: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
 /* Logo in header */
@@ -32,10 +33,16 @@ header {
 header nav button {
     margin-right: 15px;
     color: white;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color 0.3s;
 }
 
 header nav button:hover {
     text-decoration: underline;
+    color: #5dade2; /* Highlight color on hover */
 }
 
 /* Shadow for main text */
@@ -45,12 +52,13 @@ main h1, main p {
 
 /* Card styles */
 .card {
-    opacity: 0.9; /* Slight transparency for the cards */
+    margin: 20px auto; /* Center cards */
+    max-width: 900px;
+    background-color: #fff; /* Remove transparency */
+    border: 1px solid #ddd;
+    border-radius: 8px;
 }
 
-.card-body .btn {
-    margin: 5px 0;
-}
 /* Wrapper for the parallax section */
 .parallax-wrapper {
     position: relative;
@@ -123,7 +131,7 @@ body {
     padding: 30px;
     border-radius: 10px;
     display: inline-block;
-    margin: 0 auto;
+    margin: 30px auto;
     max-width: 400px;
     text-align: center;
 }
@@ -152,22 +160,73 @@ body {
 /* Styling for when the service is live */
 .live-now {
     font-size: 2.5rem;
-    color: #ffea00;
+    color: #5dade2;
 }
 
+/* Dropdown menu card styles */
+.dropdown-card {
+    background-color: #1c2833; /* Dark background for dropdown */
+    border: 1px solid #1c2833;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: auto;
+    max-width: 800px;
+    position: absolute;
+    top: 100%; /* Position it right below the header */
+    right: 0; /* Align to the right side */
+    z-index: 999; /* Ensure it stays above other elements */
+}
 
+/* Buttons inside dropdown */
+.dropdown-card .card-body {
+    display: flex;
+    justify-content: space-between; /* Distribute buttons evenly */
+    flex-wrap: wrap; /* Ensure buttons wrap on small screens */
+}
 
+.dropdown-card .card-body .btn {
+    flex: 1;
+    margin: 10px;
+    min-width: 150px;
+    padding: 15px;
+    background-color: #5dade2; /* Cool blue background */
+    color: white; /* White text */
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
 
-/* Responsive navigation buttons (stack vertically on small screens) */
+.dropdown-card .card-body .btn:hover {
+    background-color: #3498db; /* Darker blue on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    position: relative; /* Set parent as relative for dropdown absolute positioning */
+}
+
+/* Responsive dropdown */
 @media (max-width: 768px) {
+    .dropdown-card {
+        width: 100%; /* Ensure dropdown fills the container on mobile */
+    }
+
     header nav {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
+
     header nav button {
         margin-bottom: 10px;
-        margin-right: 0;
+    }
+
+    .dropdown-card .card-body .btn {
+        flex-basis: 100%;
+        margin-bottom: 10px;
     }
 }

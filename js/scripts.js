@@ -1,7 +1,9 @@
 // Function to toggle the visibility of a card
 function toggleCard(cardId) {
     const card = document.getElementById(cardId);
-    card.style.display = (card.style.display === 'none' || card.style.display === '') ? 'block' : 'none';
+    if (card) {
+        card.style.display = (card.style.display === 'none' || card.style.display === '') ? 'block' : 'none';
+    }
 }
 
 // Function to hide other cards when one is opened
@@ -52,36 +54,43 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+// Countdown timer functionality
 document.addEventListener("DOMContentLoaded", function () {
     const countdownElement = document.getElementById("countdown");
     const liveText = "Live Now!";
     const serviceDuration = 80 * 60 * 1000; // 1 hour and 20 minutes in milliseconds
 
+    function getNextSunday(now) {
+        let nextSunday = new Date(now);
+        nextSunday.setDate(now.getDate() + (7 - now.getDay()) % 7); // Ensure it is the next Sunday
+        nextSunday.setHours(10, 45, 0, 0); // Set time to 10:45 AM
+        return nextSunday;
+    }
+
     function updateCountdown() {
         const now = new Date();
-        let nextSunday = new Date();
-        nextSunday.setDate(now.getDate() + (7 - now.getDay())); // Set to next Sunday
-        nextSunday.setHours(10, 45, 0, 0); // Set to 10:45 AM
+        let nextSunday = getNextSunday(now);
 
-        if (now.getDay() === 0 && now >= nextSunday && now <= new Date(nextSunday.getTime() + serviceDuration)) {
+        const timeDifference = nextSunday - now;
+        
+        if (timeDifference <= 0 && timeDifference > -serviceDuration) {
+            // During service time
             countdownElement.innerHTML = liveText;
+        } else if (timeDifference < -serviceDuration) {
+            // If Sunday service has passed, set to next Sunday
+            nextSunday.setDate(nextSunday.getDate() + 7);
         } else {
-            if (now.getDay() === 0 && now > new Date(nextSunday.getTime() + serviceDuration)) {
-                nextSunday.setDate(nextSunday.getDate() + 7); // If it's Sunday after service, set to next Sunday
-            }
-
-            const timeDifference = nextSunday - now;
+            // Countdown to next Sunday service
             const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
             const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-            countdownElement.innerHTML =
+            countdownElement.innerHTML = 
                 `${days}d ${hours}h ${minutes}m ${seconds}s`;
         }
     }
 
     updateCountdown();
-    setInterval(updateCountdown, 1000); // Use setInterval to continuously update every second
+    setInterval(updateCountdown, 1000); // Continuously update the countdown every second
 });
-

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css"> <!-- Link to global CSS file -->
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white" style="background-color: #03355f !important;">
+        <div class="container-fluid d-flex justify-content-between align-items-center py-3">
+            <img src="../../assets/logo.svg" alt="Church Logo" class="logo" style="height: 50px;">
+            <nav>
+                <a href="../../index.html" class="btn btn-link text-white">Home</a>
+                <a href="../location.html" class="btn btn-link text-white">Location</a>
+                <a href="../gallery.html" class="btn btn-link text-white">Gallery</a>
+                <a href="#" class="btn btn-link text-white">Give</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="container my-5">
+        <h1 class="text-center">Support Our Mission</h1>
+        <p class="text-center">
+            Your generous contributions help us to serve the community, spread the word of God, and provide support to those in need. We are grateful for your support.
+        </p>
+
+        <!-- Donation Form -->
+        <div class="container">
+            <form>
+                <div class="mb-3">
+                    <label for="donationAmount" class="form-label">Donation Amount</label>
+                    <input type="number" class="form-control" id="donationAmount" placeholder="Enter amount (USD)">
+                </div>
+                <div class="mb-3">
+                    <label for="donorName" class="form-label">Your Name</label>
+                    <input type="text" class="form-control" id="donorName" placeholder="Your name">
+                </div>
+                <div class="mb-3">
+                    <label for="donorEmail" class="form-label">Your Email</label>
+                    <input type="email" class="form-control" id="donorEmail" placeholder="Your email">
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg">Donate</button>
+                </div>
+            </form>
+        </div>
+
+        <p class="text-center mt-5">
+            Thank you for your generosity and support!
+        </p>
+    </section>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

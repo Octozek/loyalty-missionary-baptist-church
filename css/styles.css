@@ -62,9 +62,8 @@ main h1, main p {
 /* Wrapper for the parallax section */
 .parallax-wrapper {
     position: relative;
+    height: 50vh; /* Adjust based on desired visible height of image */
     overflow: hidden;
-    height: 100vh;
-    background-color: white; /* Fallback color if the image doesn't load */
 }
 
 .parallax-background {
@@ -73,22 +72,26 @@ main h1, main p {
     left: 0;
     right: 0;
     bottom: 0;
+    height: 100%; /* Fill the wrapper height */
     background-size: cover;
-    background-position: center;
+    background-position: center top; /* Adjust focus as needed */
     transform: translateZ(0);
     will-change: transform;
 }
+ 
 
+/* Parallax content styling for centered title */
 .parallax-content {
-    position: relative;
+    position: absolute;
+    top: 50%; /* Center vertically within the cropped background */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
     z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
     color: white;
     text-align: center;
+    font-size: 2.5rem; /* Adjust font size as needed */
 }
+
 
 .parallax-text {
     font-size: 4rem;

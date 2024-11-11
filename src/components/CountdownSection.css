@@ -1,0 +1,26 @@
+/* src/components/CountdownSection.css */
+
+.countdown-section {
+  background-color: rgba(3, 53, 95, 0.8); /* Dark blue, slightly transparent */
+  padding: 20px;
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px auto; /* Center on the page and add top/bottom margin */
+  max-width: 300px; /* Limit width on larger screens */
+}
+
+.countdown-display {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .countdown-display {
+      font-size: 1.2rem; /* Slightly smaller font size for mobile */
+  }
+}

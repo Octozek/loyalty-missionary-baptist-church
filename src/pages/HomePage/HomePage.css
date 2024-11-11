@@ -1,0 +1,21 @@
+/* src/pages/HomePage.css */
+
+
+.background-image {
+    background-image: url('../assets/church-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+
+  

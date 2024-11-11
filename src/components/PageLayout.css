@@ -1,0 +1,78 @@
+/* src/components/PageLayout.css */
+
+.page-layout {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Parallax banner with dynamic background position */
+.parallax-banner {
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll; /* Allow background position adjustment */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.page-title {
+  font-size: 4.5rem; /* Increase font size for more prominence */
+  color: white;
+  font-weight: bold;
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7); /* Stronger shadow for readability */
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin: 0;
+  padding: 0 20px; /* Optional padding for smaller screens */
+  line-height: 1.2; /* Tighter line spacing for a bold look */
+}
+
+/* Background overlay for better text readability */
+.parallax-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Darker overlay for readability */
+  z-index: 0;
+}
+
+.content {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #333;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-section {
+  margin-bottom: 2rem;
+}
+
+.text-with-image {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.text-with-image img {
+  width: 40%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scripture-quote {
+  font-style: italic;
+  color: #666;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-left: 4px solid #5dade2;
+  background-color: #f7faff;
+  border-radius: 4px;
+}

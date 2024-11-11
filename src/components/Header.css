@@ -1,0 +1,128 @@
+/* src/components/Header.css */
+
+.header {
+  position: fixed; /* Fixes the header at the top */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it stays above other content */
+  background-color: rgba(3, 53, 95, 0.9); /* Semi-transparent background */
+  padding: 10px 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+}
+
+.desktop-nav {
+  display: flex;
+  gap: 20px; /* Ensure consistent space between buttons */
+  align-items: center; /* Vertically centers items */
+}
+
+.nav-btn {
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px; /* Consistent padding for height */
+  font-size: 1rem; /* Consistent font size */
+  display: flex;
+  align-items: center; /* Centers text vertically */
+}
+
+.nav-btn:hover {
+  color: #5dade2;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  position: absolute;
+  background-color: #03355f;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dropdown-menu li {
+  padding: 8px 15px;
+}
+
+.dropdown-menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  color: #5dade2;
+}
+
+/* Mobile Nav and Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #03355f;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+  }
+
+  .mobile-nav .nav-btn {
+    color: white;
+    text-align: left;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .mobile-dropdown {
+    display: flex;
+    flex-direction: column;
+    background-color: #03355f;
+    padding: 5px 0;
+  }
+  
+  .mobile-dropdown button {
+    background: none;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .mobile-dropdown button:hover {
+    color: #5dade2;
+  }
+} /* <-- Closing brace for the media query */

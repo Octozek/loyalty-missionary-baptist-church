@@ -16,11 +16,21 @@
 .countdown-display {
   font-size: 1.5rem;
   font-weight: bold;
+  width: 100%; /* Take full width of container */
+  min-width: 250px; /* Set a minimum width to prevent resizing */
+  text-align: center;
+  letter-spacing: 0.05em; /* Slight spacing for better readability */
+  white-space: nowrap; /* Prevents line wrapping */
+}
+
+.final-minute {
+  color: rgb(156, 156, 41); /* Change color to yellow for the final minute */
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .countdown-display {
-      font-size: 1.2rem; /* Slightly smaller font size for mobile */
+    font-size: 1.2rem; /* Slightly smaller font size for mobile */
+    min-width: 200px; /* Adjust for smaller screens */
   }
 }

@@ -1,4 +1,4 @@
-//src/components/CountdownSection.js
+// src/components/CountdownSection.js
 
 import React, { useEffect, useState } from 'react';
 import './CountdownSection.css';
@@ -16,6 +16,7 @@ const CountdownSection = () => {
           hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
           minutes: Math.floor((difference / 1000 / 60) % 60),
           seconds: Math.floor((difference / 1000) % 60),
+          isFinalMinute: difference < 60000 // Check if less than 1 minute remaining
         }
       : null;
   };
@@ -30,7 +31,7 @@ const CountdownSection = () => {
   return (
     <div className="countdown-section">
       {timeLeft ? (
-        <div className="countdown-display">
+        <div className={`countdown-display ${timeLeft.isFinalMinute ? 'final-minute' : ''}`}>
           {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
         </div>
       ) : (

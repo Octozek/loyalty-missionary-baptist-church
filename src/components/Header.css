@@ -17,14 +17,20 @@
 }
 
 .logo {
-  height: 50px;
+  position: relative; /* Ensure the element is positioned */
+  height: 1px;
+  left: 30px; /* Move 20 pixels to the right */
+  transform: translateY(-35px); /* Move the logo up by 10 pixels */
+ box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow to the logo */
 }
 
 .desktop-nav {
   display: flex;
   gap: 20px; /* Ensure consistent space between buttons */
   align-items: center; /* Vertically centers items */
+  margin-left: auto; /* Pushes the navigation to the right */
 }
+
 
 .nav-btn {
   color: white;

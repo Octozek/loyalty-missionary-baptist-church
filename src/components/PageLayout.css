@@ -3,6 +3,29 @@
 .page-layout {
   width: 100%;
   overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #2a4747 #f2d1c9; /* Track and thumb colors for Firefox */
+}
+
+/* Custom scrollbar styling for Webkit browsers (Chrome, Safari, Edge) */
+.page-layout::-webkit-scrollbar {
+  width: 12px; /* Scrollbar width */
+}
+
+.page-layout::-webkit-scrollbar-track {
+  background: #f2d1c9; /* Track color */
+  border-radius: 10px;
+}
+
+.page-layout::-webkit-scrollbar-thumb {
+  background-color: #2a4747; /* Thumb color */
+  border-radius: 10px;
+  border: 2px solid #f2d1c9; /* Border adds padding around thumb */
+}
+
+.page-layout::-webkit-scrollbar-thumb:hover {
+  background-color: #819595; /* Thumb hover color */
 }
 
 /* Parallax banner with dynamic background position */

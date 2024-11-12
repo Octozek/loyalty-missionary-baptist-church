@@ -80,6 +80,13 @@
   transition: all 0.3s ease;
 }
 
+.nav-btn.active {
+  color: rgb(156, 156, 41);
+  font-weight: bold;
+}
+
+
+
 /* Mobile styles */
 @media (max-width: 768px) {
   .desktop-nav {

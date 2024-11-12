@@ -37,6 +37,17 @@ const Header = () => {
     };
   }, []);
 
+  // Close mobile menu when resizing to non-phone size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768 && showMobileNav) {
+        setShowMobileNav(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [showMobileNav]);
+
   return (
     <header className="header" ref={headerRef}>
       <div className="container-fluid d-flex justify-content-between align-items-center py-3">
